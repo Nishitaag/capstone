@@ -1,0 +1,9 @@
+FROM django
+
+ADD . /calc
+
+WORKDIR /Users/nishita/Desktop/nish/bin/calc
+
+RUN pip install -r requirements.txt
+
+CMD [ "python", "./manage.py runserver 0.0.0.0:8000" ]
